@@ -1,0 +1,27 @@
+body {
+    background: mistyrose;
+}
+
+h1 {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    color: red;
+}
+
+form {
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+input.second {
+    position: relative;
+    top: 5px;
+}
+
+button {
+    position: relative;
+    left: -60px;
+    top: 10px;
+}

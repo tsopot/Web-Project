@@ -1,0 +1,121 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <display-name>Hotel Virtual Web App</display-name>
+
+    <session-config>
+        <session-timeout>
+            15
+        </session-timeout>
+    </session-config>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
+    <filter>
+        <filter-name>EncodeFilter</filter-name>
+        <filter-class>hotelvirtual.filters.EncodeFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>hotelvirtual.controllers.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>hotelvirtual.controllers.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MakeRequest</servlet-name>
+        <servlet-class>hotelvirtual.controllers.MakeRequestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MakeRequest</servlet-name>
+        <url-pattern>/makerequestservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MakeOrder</servlet-name>
+        <servlet-class>hotelvirtual.controllers.MakeOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MakeOrder</servlet-name>
+        <url-pattern>/makeorder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListApartments</servlet-name>
+        <servlet-class>hotelvirtual.controllers.ListApartmentsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListApartments</servlet-name>
+        <url-pattern>/listapartmentsservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListOrders</servlet-name>
+        <servlet-class>hotelvirtual.controllers.ListOrdersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListOrders</servlet-name>
+        <url-pattern>/listordersservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListRequests</servlet-name>
+        <servlet-class>hotelvirtual.controllers.ListRequestsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListRequests</servlet-name>
+        <url-pattern>/listrequestsservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Localization</servlet-name>
+        <servlet-class>hotelvirtual.controllers.LocalizationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Localization</servlet-name>
+        <url-pattern>/localization</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>localization/mes</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+        <param-value>en_GB</param-value>
+    </context-param>
+</web-app>

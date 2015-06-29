@@ -1,0 +1,96 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: lightblue;
+}
+
+header {
+    height: 80px; width: 100%;
+    background-color: steelblue;
+    color: white;
+}
+
+img.picture {
+    position: absolute;
+    top: 80px;
+    height: 100%;
+    width: 100%;
+}
+
+.logotype {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.welcome {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    float: right;
+    top: -40px;
+    right: 100px
+}
+
+li {
+    display: inline;
+    padding-right: 15px
+}
+
+.logoutform {
+    position: relative;
+    float: right;
+    top: -33px;
+    left: 100px;
+}
+
+a.logout {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+    border: 1px solid darkslategray;
+    padding: 3px 7px 2px 7px;
+    background-color: darksalmon;
+}
+
+th {
+    border: 1px solid darkslategray;
+    padding: 5px;
+    background-color: darkblue;
+    color: #fff;
+}
+
+tr:nth-child(even) td { background-color: khaki; }
+
+.approve {
+    position: relative;
+    text-align: center;
+    color: royalblue;
+    text-shadow: 2px 2px 0 #ccc;
+}
+
+
+
+
+
+
